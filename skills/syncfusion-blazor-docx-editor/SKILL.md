@@ -30,12 +30,16 @@ Generates production-ready C# and Razor code for integrating the Syncfusion DOCX
 ## Quick Start Examples
 
 ### Example 1: Display a basic DOCX Editor
+
 **User:** "Show me code to create a Document Editor component."
+
 **Result:** C# + Razor code snippet displayed
 
 ### Example 2: Enable Read‑Only Restriction Mode
+
 **User:** "Create a Document Editor with Read‑Only restriction mode."
-**Result:** Blazor snippet that loads a document and applies read-only protection during initialization.
+
+**Result:** A Blazor snippet that creates a Document Editor with read‑only protection enabled.
 
 ---
 

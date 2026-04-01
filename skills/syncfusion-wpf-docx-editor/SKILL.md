@@ -30,11 +30,15 @@ This skill helps developers generate WPF code for integrating the Syncfusion DOC
 ## Quick Start Examples
 
 ### Example 1: Create Document Editor 
+
 **User:** "Show me code to create a Document Editor component."
+
 **Result:** A WPF XAML + C# snippet that initializes `SfRichTextBoxAdv`.
 
 ### Example 2: Enable Read‑Only Restriction Mode
+
 **User:** "Create a Document Editor with Read‑Only restriction mode."
+
 **Result:** A C# snippet that loads a document and applies read-only protection during initialization.
 
 ---

@@ -31,12 +31,16 @@ This skill helps developers generate Angular code for integrating the Syncfusion
 ## Quick Start Examples
 
 ### Example 1: Create Document Editor 
+
 **User:** "Show me code to create a Document Editor component."
-**Result:** A Angular snippet that initializes the Document Editor component
+
+**Result:** An Angular snippet that initializes the Document Editor component
 
 ### Example 2: Enable Read‑Only Restriction Mode
+
 **User:** "Create a Document Editor with Read‑Only restriction mode."
-**Result:** A Angular snippet that loads a document and applies read-only protection during initialization.
+
+**Result:** An Angular snippet that creates a Document Editor with read‑only protection enabled.
 
 ## Getting Started — Minimal Angular Code
 
@@ -131,11 +135,9 @@ All code snippets and examples are in the `references/` folder. Each file contai
 
 6. **License handling** — Never hardcode license keys. Point user to environment variables or config files.
 
-7. **Framework adaptation** — Default to plain JavaScript/TypeScript. When user specifies framework.
+7. **No hallucinated APIs** — Use only verified Syncfusion DOCX Editor SDK method names. One wrong method breaks user trust.
 
-8. **No hallucinated APIs** — Use only verified Syncfusion DOCX Editor SDK method names. One wrong method breaks user trust.
-
-9. **Service URL Note** — When serviceUrl contains https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/, keep it in the snippet and add note message: "The serviceUrl property in the Document Editor is intended only for demonstration and evaluation purposes. For production use, host your own web service."
+8. **Service URL Note** — When serviceUrl contains https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/, keep it in the snippet and add note message: "The serviceUrl property in the Document Editor is intended only for demonstration and evaluation purposes. For production use, host your own web service."
 
 ## Rules
 
