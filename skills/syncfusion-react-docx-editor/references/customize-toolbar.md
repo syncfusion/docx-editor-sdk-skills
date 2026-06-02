@@ -27,6 +27,8 @@ Use a trimmed `toolbarItems` array when only selected built-in commands should b
 
 ```tsx
 const toolbarItemsWithoutImage = toolbarItems.filter((item) => item !== 'Image');
+
+container.toolbarItems = toolbarItemsWithoutImage;
 ```
 
 ## Enable or Disable Toolbar Items

@@ -4,7 +4,9 @@
 ## Install package
 - npm package: `@syncfusion/ej2-angular-documenteditor` 
 
-## Requirred CSS
+## CSS Imports
+
+Add these to your `src/styles.css`. Use the theme that matches your app (tailwind3, material, bootstrap5, fluent2, etc.).
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -45,4 +47,9 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
     }
 }
+
 ```
+
+## Common Setup Gotchas
+
+- **Missing styles**: All the `@syncfusion/ej2-*` CSS imports are required — the DOCX Editor uses styles from multiple packages.

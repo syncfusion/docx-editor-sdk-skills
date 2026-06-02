@@ -178,6 +178,8 @@ public items = [
   'UpdateFields',
   'ContentControl'
 ];
+
+this.container?.toolbarItems = items;
 ```
 
 **Placeholders**

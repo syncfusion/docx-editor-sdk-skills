@@ -4,9 +4,11 @@
 ## Install package
 - npm package: `@syncfusion/ej2-react-documenteditor` 
 
-## Requirred CSS
+## CSS Imports
 
-```
+Add these to your `src/App.css`. Use the theme that matches your app (tailwind3, material, bootstrap5, fluent2, etc.).
+
+```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
@@ -25,6 +27,7 @@
 ```tsx
 
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
+import './App.css';
 
 DocumentEditorContainerComponent.Inject(Toolbar);
 
@@ -41,3 +44,6 @@ function App() {
 
 export default App;
 ```
+## Common Setup Gotchas
+
+- **Missing styles**: All the `@syncfusion/ej2-*` CSS imports are required — the DOCX Editor uses styles from multiple packages.

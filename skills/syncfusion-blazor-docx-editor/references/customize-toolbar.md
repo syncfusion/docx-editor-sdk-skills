@@ -54,6 +54,8 @@ Handle custom item clicks by binding to the `OnToolbarClick` event:
 
 Control visibility of toolbar items by including or excluding them from the `ToolbarItems` collection.
 
+### On Creation update toolbar items
+
 ```csharp
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true ToolbarItems="@Items">
 </SfDocumentEditorContainer>
@@ -63,6 +65,34 @@ Control visibility of toolbar items by including or excluding them from the `Too
     string[] Items = new string[] { "New", "Undo", "Redo", "Comments" };
 }
 ```
+
+### Dynamically update toolbar items
+
+Control toolbar visibility dynamically at runtime by updating the `ToolbarItems` collection:
+
+```csharp
+
+<SfButton CssClass="e-outline" @onclick="@Customize">Customize Toolbar</SfButton>
+
+<SfDocumentEditorContainer @ref="Container" EnableToolbar=true ToolbarItems="@SelectedItems">
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer Container;
+    string[] SelectedItems = new string[] { "New", "Undo", "Redo", "Separator", "Image", "Table",
+        "Hyperlink", "Bookmark", "TableOfContents", "Separator",
+        "Header", "Footer", "PageSetup", "PageNumber", "Break" };
+    public string[] ToolbarOptions { get; set; } = new string[] { "New", "Open", "Undo", "Redo", "Comments", "TrackChanges", "Image", "Table" };
+    internal string DocumentName { get; set; }
+
+    public async Task Customize()
+    {
+        string[] selected = new string[] { "New", "Open", "Undo", "Redo", "Comments", "TrackChanges", "Image", "Table" };  // Get the selected toolbar items
+        Container.ToolbarItems = selected;  // Dynamically update the toolbar with selected items
+    }
+}
+```
+
 
 ## Enable or Disable Toolbar Items
 
@@ -81,3 +111,4 @@ container.Toolbar.EnableItemAsync(2, true);
 ---
 
 **Note:** Default toolbar items include: `'New'`, `'Open'`, `'Separator'`, `'Undo'`, `'Redo'`, `'Separator'`, `'Image'`, `'Table'`, `'Hyperlink'`, `'Bookmark'`, `'TableOfContents'`, `'Separator'`, `'Header'`, `'Footer'`, `'PageSetup'`, `'PageNumber'`, `'Break'`, `'InsertFootnote'`, `'InsertEndnote'`, `'Separator'`, `'Find'`, `'Separator'`, `'Comments'`, `'TrackChanges'`, `'Separator'`, `'LocalClipboard'`, `'RestrictEditing'`, `'Separator'`, `'FormFields'`, `'UpdateFields'`.
+ 

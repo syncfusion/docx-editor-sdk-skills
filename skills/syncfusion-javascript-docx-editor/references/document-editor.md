@@ -5,9 +5,11 @@ Initialize a fully integrated Document Editor Container with predefined toolbar,
 ## Install package
 - npm package: `@syncfusion/ej2-documenteditor` 
 
-## Requirred CSS
+## CSS Imports
 
-```
+Add these to your `src/styles.css`. Use the theme that matches your app (tailwind3, material, bootstrap5, fluent2, etc.).
+
+```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
@@ -25,6 +27,7 @@ Initialize a fully integrated Document Editor Container with predefined toolbar,
 Set up the Document Editor Container with toolbar and core configuration.
 
 ```tsx
+import './style.css';
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
 
 // Inject the Toolbar module
@@ -78,5 +81,9 @@ The Document Editor Container automatically includes:
 - **Properties Pane** — Displays document properties and formatting options.
 - **Status Bar** — Shows document statistics and editing state.
 - **Document Editor** — Core editor for document creation and modification.
+
+## Troubleshooting
+
+**Styles not applied:** Verify all CSS imports use the same theme name.
 
 

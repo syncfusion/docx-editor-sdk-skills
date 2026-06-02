@@ -46,9 +46,11 @@ Include theme and component script in `~/Components/App.razor` `<head>` and `<bo
 
 ```html
 <head>
+     <!-- Syncfusion Blazor DocumentEditor control's theme style sheet-->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- Syncfusion Blazor DocumentEditor control's scripts -->
     <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 </body>
 ```

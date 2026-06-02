@@ -51,7 +51,9 @@ Add theme stylesheet and DocumentEditor script to the `<head>` section of `index
 
 ```html
 <head>
+     <!-- Syncfusion Blazor DocumentEditor control's theme style sheet-->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <!-- Syncfusion Blazor DocumentEditor control's scripts -->
     <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 </head>
 ```
