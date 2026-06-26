@@ -2,7 +2,7 @@
 
 ## Overview
 
-Build MS Word–like document editor applications in Blazor using the Syncfusion DOCX Editor. This skill provides AI-guided code generation and integration support for the Blazor document editor component, enabling editing, formatting, import/export capabilities, and more.
+Build MS Word–like document editor applications in Blazor using the Syncfusion<sup style="font-size:70%">&reg;</sup> [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor). This skill provides AI-guided code generation and integration support for the Blazor document editor component, enabling editing, formatting, import/export capabilities, and more.
 
 See **[SKILL.md](SKILL.md)** for the full intent-routing guide and rules.
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Build MS Word–like document editor applications in Angular using the Syncfusion DOCX Editor. This skill provides AI-guided code generation and integration support for the Angular document editor component, enabling editing, formatting, import/export capabilities, and more.
+Build MS Word–like document editor applications in Angular using the Syncfusion<sup style="font-size:70%">&reg;</sup> [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor). This skill provides AI-guided code generation and integration support for the Angular document editor component, enabling editing, formatting, import/export capabilities, and more.
 
 See **[SKILL.md](SKILL.md)** for the full intent-routing guide and rules.
 
@@ -61,7 +61,7 @@ There are two ways to use skills:
    Create an Angular document editor with a built-in toolbar that allows users to open, edit, and save documents
    ```
 
-When a skill is loaded, AI Agent gains specialized knowledge of the Syncfusion React DOCX Editor and can help you generate code snippets or build complete document editor features.
+When a skill is loaded, AI Agent gains specialized knowledge of the Syncfusion Angular DOCX Editor and can help you generate code snippets or build complete document editor features.
 
 ---
 

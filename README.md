@@ -1,6 +1,6 @@
 # Syncfusion DOCX Editor SDK Skills
 
-Skills are specialized instruction sets that teach AI assistants how to perform Word document editing tasks using platform-specific Syncfusion DOCX Editor SDK. These skills follow the [Agent Skills open standard](https://agentskills.io/) and include a `SKILL.md` manifest plus topic-level references to guide automated code generation.
+Skills are specialized instruction sets that teach AI assistants how to perform Word document editing tasks using platform-specific Syncfusion<sup style="font-size:70%">&reg;</sup> [DOCX Editor SDK](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor). These skills follow the [Agent Skills open standard](https://agentskills.io/) and include a `SKILL.md` manifest plus topic-level references to guide automated code generation.
 
 ## About This Repository
 
