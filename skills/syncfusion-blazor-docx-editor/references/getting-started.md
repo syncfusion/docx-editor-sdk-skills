@@ -1,6 +1,12 @@
-# Blazor DocumentEditor WASM Setup
+# Blazor DocumentEditor - Quick Start Guide
 
 Complete setup for DocumentEditor in Blazor WebAssembly apps; includes NuGet installation, service registration, resource linking, and component initialization.
+
+## Quick Links
+
+- **[Blazor Web App Setup](./blazor-documenteditor-webapp.md)** ← Recommended for new projects
+- **[Blazor Server Setup](./blazor-documenteditor-server.md)** ← For Blazor Server projects  
+- **[WebAssembly Setup](./getting-started.md)** ← For pure WebAssembly projects
 
 ## Install NuGet Packages
 
@@ -51,7 +57,7 @@ Add theme stylesheet and DocumentEditor script to the `<head>` section of `index
 
 ```html
 <head>
-     <!-- Syncfusion Blazor DocumentEditor control's theme style sheet-->
+    <!-- Syncfusion Blazor DocumentEditor control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <!-- Syncfusion Blazor DocumentEditor control's scripts -->
     <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
@@ -63,6 +69,7 @@ Add theme stylesheet and DocumentEditor script to the `<head>` section of `index
 
 Themes are available via Static Web Assets, CDN, or Custom Resource Generator (CRG).
 
+
 ## Add DocumentEditor Component
 
 Add the component to your page (e.g., `Pages/Index.razor`):
@@ -71,15 +78,11 @@ Add the component to your page (e.g., `Pages/Index.razor`):
 <SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
 ```
 
-**Placeholders**
-- `Pages/Index.razor` → Replace with `{targetPagePath}`
-- `EnableToolbar=true` → Optional; set to `false` or omit for editor without toolbar
-
 ## Dependencies
 
-Syncfusion auto-installs dependencies: Syncfusion.Blazor.Calendars, Syncfusion.Blazor.Core, Syncfusion.Blazor.Data, Syncfusion.Blazor.DropDowns, Syncfusion.Blazor.Navigations, Syncfusion.WordProcessor.AspNet.Core, System.Text.Json. Initial page load may take up to 6 seconds for browser to load all dependency packages.
+	Syncfusion auto-installs dependencies: Syncfusion.Blazor.Calendars, Syncfusion.Blazor.Core, Syncfusion.Blazor.Data, Syncfusion.Blazor.DropDowns, Syncfusion.Blazor.Navigations, Syncfusion.WordProcessor.AspNet.Core, System.Text.Json. Initial page load may take up to 6 seconds for browser to load all dependency packages.
 
-## File-based Changes
+## File Checklist
 
 - `_Imports.razor` → Add Syncfusion namespace imports
 - `Program.cs` → Register `AddSyncfusionBlazor()` service

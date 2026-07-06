@@ -3,7 +3,7 @@ name: syncfusion-javascript-docx-editor
 description: 'Use this skill when a user asks how to generate, integrate, or implement a Word‑like document editor in JavaScript (ES6) using Syncfusion. Trigger it for requests involving the Syncfusion JavaScript (ES6) Document Editor, JavaScript (ES6)‑based editor integration, document editing and formatting, comments and track changes, working with tables and images, managing headers and footers, applying document protection, and building end‑to‑end document workflows in Javascript applications.'
 metadata:
   author: Syncfusion Inc
-  version: "33.1.44"
+  version: "34.1.29"
 ---
 
 # Syncfusion JavaScript DOCX Editor
@@ -105,7 +105,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 
 | File                                 | Topic                                    |
 |--------------------------------------|------------------------------------------|
-| document-editor.md                   | Create and Initialize Document Editor    |
+| getting-started.md                   | Create and Initialize Document Editor    |
 | editor-only.md                       | Configure Editor-Only Mode               |
 | track-changes.md                     | Track Changes and Manage Revisions       |
 | comments.md                          | Insert, Manage, and Delete Comments      |

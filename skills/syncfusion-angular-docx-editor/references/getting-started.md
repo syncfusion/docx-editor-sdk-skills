@@ -1,15 +1,56 @@
-# Initialize Document Editor
+# Getting started with Angular DOCX Editor
 > Document Editor control creation — create document editor.
 
-## Install package
-- npm package: `@syncfusion/ej2-angular-documenteditor` 
+## Table of Contents
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Installation](#installation)
+- [Package Setup](#package-setup)
+- [CSS Imports](#css-imports)
+- [Document Editor Container with Toolbar](#document-editor-container-with-toolbar)
+- [Common Setup Gotchas](#common-setup-gotchas)
+
+## When to Use This Skill
+
+Use this skill when you need to:
+- Set up Document Editor component
+- Create Document Editor implementation with toolbar
+
+## Installation
+
+Install Syncfusion Angular DOCX Editor component via npm:
+
+```bash
+npm install @syncfusion/ej2-angular-documenteditor
+```
+
+## Package Setup
+
+Import the DocumentEditorContainerModule in your Angular module:
+
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, DocumentEditorContainerModule],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
 ## CSS Imports
 
-Add these to your `src/styles.css`. Use the theme that matches your app (tailwind3, material, bootstrap5, fluent2, etc.).
+Add these to your `src/styles.css`. Use the theme that matches your app (material, bootstrap5, fluent2, tailwind, fabric, etc.):
 
 ```css
+/* Base styles */
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+
+/* Component styles required by Document Editor */
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
@@ -21,8 +62,22 @@ Add these to your `src/styles.css`. Use the theme that matches your app (tailwin
 
 ```
 
-## Document Editor Container with Toolbar 
+**Available themes:**
+- material (default)
+- material-dark
+- bootstrap5
+- bootstrap5-dark
+- fabric
+- fabric-dark
+- tailwind
+- tailwind-dark
+- fluent2
+- fluent2-dark
+
+## Document Editor Container with Toolbar
 **This is the default and recommended approach for most use cases.**
+
+Create a DOCX Editor component with minimal configuration:
 
 ```typescript
 import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
@@ -47,7 +102,6 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
     }
 }
-
 ```
 
 ## Common Setup Gotchas

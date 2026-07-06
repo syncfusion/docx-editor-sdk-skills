@@ -3,7 +3,7 @@ name: syncfusion-aspnetcore-docx-editor
 description: 'Use this skill when a user asks how to generate, integrate, or implement a Word‑like document editor in ASP.NET Core using Syncfusion. Trigger it for requests involving the Syncfusion ASP.NET Core Document Editor, ASP.NET Core‑based editor integration, document editing and formatting, comments and track changes, working with tables and images, managing headers and footers, applying document protection, and building end‑to‑end document workflows in ASP.NET Core applications.'
 metadata:
   author: Syncfusion Inc
-  version: "33.1.44"
+  version: "34.1.29"
 ---
 
 
@@ -88,7 +88,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | comments.md                          | Insert, Manage, and Delete Comments      |
 | customize-ribbon.md                  | Customize Ribbon/Toolbar                 |
 | customize-tool-bar.md                | Customize Toolbar Items                  |
-| document-editor.md                   | Initialize Document Editor (Razor/Cshtml)|
+| getting-started.md                   | Initialize Document Editor (Razor/Cshtml)|
 | document-protection.md               | Protect and Restrict Document Editing    |
 | editor-only.md                       | Configure Editor-Only Mode               |
 | find-and-replace.md                  | Find and Replace Text                    |

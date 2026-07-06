@@ -3,7 +3,7 @@ name: syncfusion-wpf-docx-editor
 description: 'Use this skill when a user asks how to generate, integrate, or implement a Word‑like document editor in WPF using Syncfusion. Trigger it for requests involving the Syncfusion WPF Document Editor, WPF‑based editor integration, document editing and formatting, comments, working with tables and images, managing headers and footers, applying document protection, and building end‑to‑end document workflows in WPF applications.'
 metadata:
   author: Syncfusion Inc
-  version: "33.1.44"
+  version: "34.1.29"
 ---
 
 # Syncfusion WPF DOCX Editor

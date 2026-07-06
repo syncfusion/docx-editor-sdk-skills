@@ -3,7 +3,7 @@ name: syncfusion-react-docx-editor
 description: 'Use this skill when a user asks how to generate, integrate, or implement a Word‑like document editor in React using Syncfusion. Trigger it for requests involving the Syncfusion React Document Editor, React‑based editor integration, document editing and formatting, comments and track changes, working with tables and images, managing headers and footers, applying document protection, and building end‑to‑end document workflows in React applications.'
 metadata:
   author: Syncfusion Inc
-  version: "33.1.44"
+  version: "34.1.29"
 ---
 
 # Syncfusion React DOCX Editor
@@ -111,7 +111,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 
 | File                          | Contents                                      |
 |-------------------------------|-----------------------------------------------|
-| document-editor.md            | Document Editor initialization and container setup |
+| getting-started.md            | Document Editor initialization and container setup |
 | editor-only.md                | Editor-only mode with manual module injection |
 | form-fields.md                | Insert, inspect, fill, reset, and export form fields |
 | comments.md                   | Add, reply to, navigate, and delete comments  |

@@ -3,7 +3,7 @@ name: syncfusion-blazor-docx-editor
 description: 'Use this skill when a user asks how to generate, integrate, or implement a Word‑like document editor in Blazor using Syncfusion. Trigger it for requests involving the Syncfusion Blazor Document Editor, Blazor‑based integration, document editing and formatting, comments and track changes, working with tables and images, managing headers and footers, applying document protection, and building end‑to‑end document workflows in Blazor applications.'
 metadata:
   author: Syncfusion Inc
-  version: "33.1.44"
+  version: "34.1.29"
 ---
 
 
@@ -76,7 +76,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 
 | File                                 | Contents                                           |
 |--------------------------------------|----------------------------------------------------|
-| blazor-documenteditor-wasm.md        | Initialize Document Editor in Blazor WebAssembly   |
+| getting-started.md                   | Initialize Document Editor in Blazor WebAssembly   |
 | blazor-documenteditor-server.md      | Initialize Document Editor in Blazor Server        |
 | blazor-documenteditor-webapp.md      | Initialize Document Editor in Blazor Web App       |
 | form-fields.md                       | Insert, edit, and manage form fields               |
