@@ -2,7 +2,7 @@
 
 ## Overview
 
-Build MS Word–like document editor applications in React using the Syncfusion DOCX Editor. This skill provides AI-guided code generation and integration support for the React document editor component, enabling editing, formatting, import/export capabilities, and more.
+Build MS Word–like document editor applications in React using the Syncfusion<sup style="font-size:70%">&reg;</sup> [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor). This skill provides AI-guided code generation and integration support for the React document editor component, enabling editing, formatting, import/export capabilities, and more.
 
 See **[SKILL.md](SKILL.md)** for the full intent-routing guide and rules.
 
