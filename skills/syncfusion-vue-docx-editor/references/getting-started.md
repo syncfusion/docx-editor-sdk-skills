@@ -110,21 +110,22 @@ yarn add @syncfusion/ej2-vue-documenteditor
 
 ## Import CSS Styles
 
-Syncfusion components require CSS stylesheets to display correctly. Import the Material theme (or your preferred theme) into the `<style>` section of your main component file.
+Syncfusion components require CSS stylesheets to display correctly. Install the following theme package, then import the Tailwind3 theme (or your preferred theme) into the `<style>` section of your main component file.
+
+### Install Theme Package
+
+Install Syncfusion Tailwind3 theme package via npm:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
 
 ### Vue 3 (App.vue or src/app.vue)
 
 ```vue
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 </style>
 ```
 
@@ -132,32 +133,40 @@ Syncfusion components require CSS stylesheets to display correctly. Import the M
 
 ```vue
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+  @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 </style>
 ```
 
 ### Available Themes
 
-Replace `material` in the import paths with any of the following themes:
+Each theme has its own npm package. Install the one you want, then replace `tailwind3` in the import paths with the matching theme name.
 
-- **material** (default)
-- **material-dark**
-- **bootstrap5**
-- **bootstrap5-dark**
-- **tailwind**
-- **tailwind-dark**
-- **fluent2**
-- **fluent2-dark**
+| Theme | npm package |
+|---|---|
+| `tailwind3` (default) | `@syncfusion/ej2-tailwind3-theme` |
+| `tailwind3-dark` | `@syncfusion/ej2-tailwind3-dark-theme` |
+| `material3` | `@syncfusion/ej2-material3-theme` |
+| `material3-dark` | `@syncfusion/ej2-material3-dark-theme` |
+| `material` | `@syncfusion/ej2-material-theme` |
+| `material-dark` | `@syncfusion/ej2-material-dark-theme` |
+| `bootstrap5` | `@syncfusion/ej2-bootstrap5-theme` |
+| `bootstrap5-dark` | `@syncfusion/ej2-bootstrap5-dark-theme` |
+| `fluent2` | `@syncfusion/ej2-fluent2-theme` |
+| `fluent2-dark` | `@syncfusion/ej2-fluent2-dark-theme` |
 
-**Example:** To use the bootstrap5 theme, replace `material.css` with `bootstrap5.css` in all import statements.
+**Example:** To use the `material` theme instead of `tailwind3`:
+
+```bash
+npm install @syncfusion/ej2-material-theme
+```
+
+```vue
+<style>
+  @import "../node_modules/@syncfusion/ej2-material-theme/styles/document-editor/index.css";
+  @import "../node_modules/@syncfusion/ej2-material-theme/styles/document-editor-container/index.css";
+</style>
+```
 
 ## Document Editor Container with Toolbar 
 

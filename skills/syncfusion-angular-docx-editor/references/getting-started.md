@@ -5,6 +5,7 @@
 - [When to Use This Skill](#when-to-use-this-skill)
 - [Installation](#installation)
 - [Package Setup](#package-setup)
+- [Install Theme Package](#install-theme-package)
 - [CSS Imports](#css-imports)
 - [Document Editor Container with Toolbar](#document-editor-container-with-toolbar)
 - [Common Setup Gotchas](#common-setup-gotchas)
@@ -42,35 +43,32 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
+## Install Theme Package
+
+Install Syncfusion Tailwind3 theme package via npm:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
 ## CSS Imports
 
-Add these to your `src/styles.css`. Use the theme that matches your app (material, bootstrap5, fluent2, tailwind, fabric, etc.):
+Add these to your `src/styles.css`. Use the theme that matches your app (tailwind, material, bootstrap5, fluent2, fabric, etc.):
 
 ```css
-/* Base styles */
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-
-/* Component styles required by Document Editor */
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-angular-documenteditor/styles/material.css';
-
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 ```
 
 **Available themes:**
-- material (default)
+- tailwind (default)
+- tailwind-dark
+- material
 - material-dark
 - bootstrap5
 - bootstrap5-dark
 - fabric
 - fabric-dark
-- tailwind
-- tailwind-dark
 - fluent2
 - fluent2-dark
 

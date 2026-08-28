@@ -72,21 +72,21 @@ npm install @syncfusion/ej2-react-documenteditor
 
 ## CSS Imports
 
-### Material Theme (Default)
+### Install Theme Package
+
+Install Syncfusion Tailwind3 theme package via npm:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+### Tailwind3 Theme (Default)
 
 Add these to your `src/App.css`. Use the theme that matches your app (tailwind3, material, bootstrap5, fluent2, etc.).
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
-
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 ```
 
 Import CSS in your App.tsx:
@@ -97,11 +97,31 @@ import './App.css';
 
 ### Other Available Themes
 
-- Bootstrap: `bootstrap.css`
-- Fabric: `fabric.css`
-- Bootstrap 5: `bootstrap5.css`
-- Material: `material.css`
-- Tailwind CSS: `tailwind.css`
+Each theme has its own npm package. Install the one you want, then replace `tailwind3` in the import paths with the matching theme name.
+
+| Theme | npm package |
+|---|---|
+| `tailwind3` (default) | `@syncfusion/ej2-tailwind3-theme` |
+| `tailwind3-dark` | `@syncfusion/ej2-tailwind3-dark-theme` |
+| `material3` | `@syncfusion/ej2-material3-theme` |
+| `material3-dark` | `@syncfusion/ej2-material3-dark-theme` |
+| `material` | `@syncfusion/ej2-material-theme` |
+| `material-dark` | `@syncfusion/ej2-material-dark-theme` |
+| `bootstrap5` | `@syncfusion/ej2-bootstrap5-theme` |
+| `bootstrap5-dark` | `@syncfusion/ej2-bootstrap5-dark-theme` |
+| `fluent2` | `@syncfusion/ej2-fluent2-theme` |
+| `fluent2-dark` | `@syncfusion/ej2-fluent2-dark-theme` |
+
+**Example:** To use the `material` theme instead of `tailwind3`:
+
+```bash
+npm install @syncfusion/ej2-material-theme
+```
+
+```css
+  @import "../node_modules/@syncfusion/ej2-material-theme/styles/document-editor/index.css";
+  @import "../node_modules/@syncfusion/ej2-material-theme/styles/document-editor-container/index.css";
+```
 
 ## Document Editor Container with Toolbar 
 **This is the default and recommended approach for most use cases.**
