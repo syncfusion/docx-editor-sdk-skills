@@ -106,6 +106,52 @@ container.appendTo('#container');
 
 **Note:** Custom metadata is preserved only in SFDT export. Other formats (DOCX) do not retain this data.
 
+## Set Colors for Revision Types
+
+Override the default author-based color for specific revision types.
+
+```ts
+let container: DocumentEditorContainer = new DocumentEditorContainer({
+  enableToolbar: true,
+  enableTrackChanges: true,
+  height: '590px',
+  // Use the following service URL only for demo purposes
+  serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
+});
+
+container.documentEditorSettings.revisionSettings = {
+  insertRevisionColor: '#22C55E',
+  deleteRevisionColor: '#EF4444',
+  insertedRowColor: '#f6fa06',
+  deletedRowColor: '#3a02bb'
+};
+```
+
+**Placeholders**
+- `'#22C55E'` → Replace with `{insertRevisionColor}`
+- `'#EF4444'` → Replace with `{deleteRevisionColor}`
+- `'#f6fa06'` → Replace with `{insertedRowColor}`
+- `'#3a02bb'` → Replace with `{deletedRowColor}`
+
+**Note:** These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document. By default, all revision types use author-specific colors (`'byAuthor'`).
+
+## Custom Colors for Track Changes
+
+Assign a color per author from a custom array, applied in order.
+
+```ts
+container.documentEditorSettings.revisionSettings.revisionColors = [
+  '#0e76b1',
+  '#bb00ff',
+  '#c14f16'
+];
+```
+
+**Placeholders**
+- `'#0e76b1'`, `'#bb00ff'`, `'#c14f16'` → Replace with `{authorColors}` (an array of hex color strings applied to authors in order)
+
+**Note:** The first author gets the first color, the second gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
 ## Protect Document in Revisions-Only Mode
 
 Restrict document editing so users can only view and make corrections; only the author can accept/reject changes.

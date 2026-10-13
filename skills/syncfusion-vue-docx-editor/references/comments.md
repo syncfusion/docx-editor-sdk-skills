@@ -204,3 +204,31 @@ export default {
 
 **Placeholders**
 - `'{currentUser}'` → Replace with `{currentUser}`
+---
+
+## Highlight Comments by Author
+
+Display each comment marker in the author's avatar color, with the corresponding text and comment pane border highlighted when selected.
+
+```vue
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='documenteditor' :documentEditorSettings='settings' id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+  export default {
+    data() {
+      return {
+      settings: { commentSettings: { highlightCommentsByAuthor: true } }
+      },
+    },
+    provide: {
+      DocumentEditorContainer: [Toolbar]
+    }
+  }
+</script>
+```
+
+> **Note:** If multiple comments appear on the same line, the marker retains the first author's avatar color.

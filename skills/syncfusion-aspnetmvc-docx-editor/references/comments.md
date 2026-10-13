@@ -139,3 +139,27 @@ function beforeComment(args) {
 
 **Placeholders**
 - `'Guest User'` → Replace with `{currentUser}`
+
+---
+
+## Highlight Comments by Author
+
+Display each comment marker in the author's avatar color, with the corresponding text and comment pane border highlighted when selected.
+
+```cshtml
+    @Html.EJS().DocumentEditorContainer("container").EnableTrackChanges(true).EnableToolbar(true).Height("590px").Render()
+```
+
+```javascript
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var container = document.getElementById("container").ej2_instances[0];
+            container.documentEditorSettings.commentSettings = { highlightCommentsByAuthor: true };
+        });
+    </script>
+}
+```
+
+**Note**
+- If multiple comments appear on the same line, the marker retains the first author's avatar color.

@@ -83,3 +83,26 @@ await container.DocumentEditor.Editor.StopProtectionAsync("123");
 Available protection modes: `NoProtection`, `ReadOnly`, `FormFieldsOnly`, `CommentsOnly`.
 
 > **Note:** Comments-only protection can also be enabled through the Restrict Editing pane in the UI.
+
+## Highlight comments by author
+
+Display each comment marker in the author's avatar color, with the corresponding text and comment pane border highlighted when selected.
+
+```csharp
+@using Syncfusion.Blazor.DocumentEditor
+
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="Settings">
+</SfDocumentEditorContainer>
+
+@code {
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel
+    {
+        CommentSettings = new CommentSettingsModel
+        {
+            HighlightCommentsByAuthor = true
+        }
+    };
+}
+```
+
+> **Note:** If multiple comments appear on the same line, the marker retains the first author's avatar color.

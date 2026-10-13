@@ -146,3 +146,23 @@ function beforeCommentAction(args: CommentActionEventArgs) {
 
 **Placeholders**
 - `'Guest User'` → Replace with `{currentUser}`
+
+---
+
+## Highlight Comments by Author
+
+Display each comment marker in the author's avatar color, with the corresponding text and comment pane border highlighted when selected.
+
+```tsx
+// Enable comment highlights per author
+let settings = { commentSettings: { highlightCommentsByAuthor: true } };
+
+<DocumentEditorContainerComponent
+  id="container"
+  enableToolbar={true}
+  documentEditorSettings={settings}
+/>
+```
+
+**Note**
+- If multiple comments appear on the same line, the marker retains the first author's avatar color.

@@ -90,6 +90,67 @@ Attach additional metadata (roles, tags, identifiers) to tracked changes and dis
 
 > **Note:** Custom metadata is preserved when exporting as SFDT. For other formats (DOCX, etc.), custom data is not retained as it is specific to Document Editor.
 
+## Set colors for revision types
+
+Override the default author-based color for specific revision types.
+
+```csharp
+<SfDocumentEditorContainer EnableToolbar=true Height="890px" EnableTrackChanges="true" DocumentEditorSettings="@Settings"></SfDocumentEditorContainer>
+
+@code {
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel
+    {
+        RevisionSettings = new RevisionSettingsModel()
+        {
+            InsertRevisionColor = "#22C55E",
+            DeleteRevisionColor = "#EF4444",
+            InsertedRowColor = "#f6fa06",
+            DeletedRowColor = "#3a02bb"
+        }
+    };
+}
+```
+
+**Placeholders**
+- `"#22C55E"` → Replace with `{insertRevisionColor}`
+- `"#EF4444"` → Replace with `{deleteRevisionColor}`
+- `"#f6fa06"` → Replace with `{insertedRowColor}`
+- `"#3a02bb"` → Replace with `{deletedRowColor}`
+
+> **Note:** These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document. By default, all revision types use author-specific colors (`'byAuthor'`).
+
+## Custom colors for track changes
+
+Assign a color per author from a custom array, applied in order.
+
+```csharp
+@using Syncfusion.Blazor.DocumentEditor
+
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="settings">
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+    private DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel()
+    {
+        RevisionSettings = new RevisionSettingsModel()
+        {
+            RevisionColors = new string[]
+            {
+                "#0000ff",
+                "#bb00ff",
+                "#c14f16"
+            }
+        }
+    };
+}
+```
+
+**Placeholders**
+- `"#0000ff"`, `"#bb00ff"`, `"#c14f16"` → Replace with `{authorColors}` (an array of hex color strings applied to authors in order)
+
+> **Note:** The first author gets the first color, the second gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
 ## Protect document (revisions-only mode)
 
 Restrict users to view and edit with tracked changes only—they cannot accept or reject revisions without a password.

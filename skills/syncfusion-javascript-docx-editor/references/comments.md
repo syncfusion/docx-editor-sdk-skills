@@ -143,6 +143,25 @@ container.appendTo('#container');
 - `mentionData` array → Replace with `{userListDataSource}`
 - `'Name'` → Replace with `{displayField}`
 
+## Highlight Comments by Author
+
+Display each comment marker in the author's avatar color, with the corresponding text and comment pane border highlighted when selected.
+
+```ts
+var container = new ej.documenteditor.DocumentEditorContainer({
+  enableToolbar: true,
+  height: '590px',
+  // Enable comment highlight by author in document editor
+  documentEditorSettings: { commentSettings: { highlightCommentsByAuthor: true } }
+});
+
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+container.appendTo('#container');
+```
+
+**Note:** If multiple comments appear on the same line, the marker retains the first author's avatar color.
+
 ## Handle Comment Actions with Events
 
 Intercept and validate comment actions (post, edit, reply, resolve, delete) using `beforeCommentAction` event.

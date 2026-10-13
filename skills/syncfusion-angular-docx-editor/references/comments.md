@@ -135,6 +135,19 @@ this.container.documentEditorSettings = settings;
 - `mentionData` → Replace with `{mentionDataSource}`
 - `'Name'` → Replace with `{displayField}`
 
+## Highlight Comments by Author
+
+Display each comment marker in the author's avatar color, with the corresponding text and comment pane border highlighted when selected.
+
+```typescript
+let settings: DocumentEditorSettingsModel = { commentSettings: { highlightCommentsByAuthor: true } };
+
+// Apply settings to DocumentEditorContainer
+this.container.documentEditorSettings = settings;
+```
+
+**Note:** If multiple comments appear on the same line, the marker retains the first author's avatar color.
+
 ## Handle Comment Events
 
 Listen to comment actions (Post, Edit, Reply, Resolve, Reopen, Delete) and implement custom logic.

@@ -98,6 +98,53 @@ this.container.documentEditorSettings = settings;
 **Note:**
 - `customData` is preserved in SFDT, but not in DOCX or other export formats.
 
+## Set Colors for Revision Types
+
+Override the default author-based color for specific revision types.
+
+```typescript
+let settings = {
+  revisionSettings: {
+    insertRevisionColor: '#22C55E',
+    deleteRevisionColor: '#EF4444',
+    insertedRowColor: '#ffff00',
+    deletedRowColor: '#0000ff'
+  }
+};
+
+this.container.documentEditorSettings = settings;
+```
+
+**Placeholders**
+- `'#22C55E'` → Replace with `{insertRevisionColor}`
+- `'#EF4444'` → Replace with `{deleteRevisionColor}`
+- `'#ffff00'` → Replace with `{insertedRowColor}`
+- `'#0000ff'` → Replace with `{deletedRowColor}`
+
+**Note:**
+- These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+- By default, all revision types use author-specific colors (`'byAuthor'`).
+
+## Custom Colors for Track Changes
+
+Assign a color per author from a custom array, applied in order.
+
+```typescript
+let settings = {
+  revisionSettings: {
+    revisionColors: ['#047a18', '#bb00ff', '#c14f16']
+  }
+};
+
+this.container.documentEditorSettings = settings;
+```
+
+**Placeholders**
+- `'#047a18'`, `'#bb00ff'`, `'#c14f16'` → Replace with `{authorColors}` (an array of hex color strings applied to authors in order)
+
+**Note:**
+- The first author gets the first color, the second gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
 ## Protect Document (Revisions Only)
 
 Restrict document to revision-only mode. Users can view and make corrections but cannot accept or reject changes.

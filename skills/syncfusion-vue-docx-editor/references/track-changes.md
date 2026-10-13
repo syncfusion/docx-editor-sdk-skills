@@ -102,6 +102,50 @@ const settings = {
 
 > **Note:** Custom metadata is preserved only in SFDT export format. Other formats (DOCX, PDF) do not retain custom data.
 
+## Set Colors for Revision Types
+
+Override the default author-based color for specific revision types.
+
+```ts
+const settings = {
+  revisionSettings: {
+    insertRevisionColor: '#22C55E',
+    deleteRevisionColor: '#EF4444',
+    insertedRowColor: '#7C3AED',
+    deletedRowColor: '#F97316'
+  }
+};
+
+// Apply in component: :documentEditorSettings="settings" :enableTrackChanges="true"
+```
+
+**Placeholders**
+- `'#22C55E'` → Replace with `{insertRevisionColor}`
+- `'#EF4444'` → Replace with `{deleteRevisionColor}`
+- `'#7C3AED'` → Replace with `{insertedRowColor}`
+- `'#F97316'` → Replace with `{deletedRowColor}`
+
+> **Note:** These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document. By default, all revision types use author-specific colors (`'byAuthor'`).
+
+## Custom Colors for Track Changes
+
+Assign a color per author from a custom array, applied in order.
+
+```ts
+const settings = {
+  revisionSettings: {
+    revisionColors: ['#0000ff', '#bb00ff', '#c14f16']
+  }
+};
+
+// Apply in component: :documentEditorSettings="settings" :enableTrackChanges="true"
+```
+
+**Placeholders**
+- `'#0000ff'`, `'#bb00ff'`, `'#c14f16'` → Replace with `{authorColors}` (an array of hex color strings applied to authors in order)
+
+> **Note:** The first author gets the first color, the second gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
 ## Protect Document for Revisions Only
 
 Restrict the document so users can only add revisions but cannot accept or reject them.

@@ -171,6 +171,34 @@ When you need to allow comment actions only for specific users.
 
 ---
 
+## Highlight Comments by Author
+
+Display each comment marker in the author's avatar color, with the corresponding text and comment pane border highlighted when selected.
+
+```cshtml
+    <ejs-documenteditorcontainer id="container"
+                                 height="590px"
+                                 enableTrackChanges="true"
+                                 enableToolbar="true">
+    </ejs-documenteditorcontainer>
+```
+
+```javascript
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var container = document.getElementById("container").ej2_instances[0];
+            container.documentEditorSettings.commentSettings = { highlightCommentsByAuthor: true };
+        });
+    </script>
+}
+```
+
+**Note**
+- If multiple comments appear on the same line, the marker retains the first author's avatar color.
+
+---
+
 ## File Changes
 
 - `Pages/Index.cshtml` → Add comment buttons, initialize editor, wire `beforeCommentAction` event handler

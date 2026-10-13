@@ -144,3 +144,77 @@ container.documentEditor.beforeAcceptRejectChanges = beforeAcceptRejectChanges;
 **Placeholders**
 - `'Hary'` → Replace with `{allowedAuthor}`
 ---
+
+## Set Colors for Revision Types
+
+Override the default author-based color for specific revision types.
+
+```cshtml
+<ejs-documenteditorcontainer id="container"
+    height="590px"
+    enableTrackChanges="true"
+    enableToolbar="true">
+</ejs-documenteditorcontainer>
+```
+
+```javascript
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var container = document.getElementById("container").ej2_instances[0];
+
+            container.documentEditorSettings.revisionSettings = {
+                insertRevisionColor: '#22C55E',
+                deleteRevisionColor: '#EF4444',
+                insertedRowColor: '#f6fa06',
+                deletedRowColor: '#3a02bb'
+            };
+        });
+    </script>
+}
+```
+
+**Placeholders**
+- `'#22C55E'` → Replace with `{insertRevisionColor}`
+- `'#EF4444'` → Replace with `{deleteRevisionColor}`
+- `'#f6fa06'` → Replace with `{insertedRowColor}`
+- `'#3a02bb'` → Replace with `{deletedRowColor}`
+
+**Note**
+- These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+- By default, all revision types use author-specific colors (`'byAuthor'`).
+
+---
+
+## Custom Colors for Track Changes
+
+Assign a color per author from a custom array, applied in order.
+
+```cshtml
+    <ejs-documenteditorcontainer id="container"
+                                 height="590px"
+                                 enableTrackChanges="true"
+                                 enableToolbar="true">
+    </ejs-documenteditorcontainer>
+```
+
+```javascript
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var container = document.getElementById("container").ej2_instances[0];
+
+            // Apply revision colors dynamically
+            container.documentEditorSettings.revisionSettings = {
+                revisionColors: ['#0000ff', '#bb00ff', '#c14f16']
+            };
+        });
+    </script>
+}
+```
+
+**Placeholders**
+- `'#0000ff'`, `'#bb00ff'`, `'#c14f16'` → Replace with `{authorColors}` (an array of hex color strings applied to authors in order)
+
+**Note**
+- The first author gets the first color, the second gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
