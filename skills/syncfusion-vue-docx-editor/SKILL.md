@@ -119,7 +119,8 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | paste-formatting.md                  | Control Paste Formatting Behavior        |
 | ribbon.md                            | initialize documentEditor with Ribbon UI |
 | spell-check.md                       | Enable and Configure Spell Check         |
-
+| collaborative-editing-core.md | Collaborative editing with Collaboration Client and Server (ASP.NET Core backend) |
+| collaborative-editing-java.md| Collaborative editing using SockJS, STOMP, and Redis in a Java (Spring Boot) backend |
 
 ## Key Rules for Code Generation
 

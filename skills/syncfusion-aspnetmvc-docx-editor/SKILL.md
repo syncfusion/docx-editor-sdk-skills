@@ -94,6 +94,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | paste-formatting.md                  | Preserve paste formatting (server-side)  |
 | ribbon.md                            | Initialize documentEditor with Ribbon UI |
 | track-changes.md                     | Track Changes and Manage Revisions       |
+| collaborative-editing-mvc.md | Collaborative editing with Collaboration Client and Server (ASP.NET CoMVCre backend) |
 
 ## Key Rules for Code Generation
 

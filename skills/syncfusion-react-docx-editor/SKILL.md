@@ -121,7 +121,8 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | customize-toolbar.md          | Custom toolbar items, button state, and pane control |
 | find-and-replace.md           | Search, replace, and search-results management |
 | paste-formatting.md           | Preserve clipboard formatting with a backend service |
-
+| collaborative-editing-core.md | Collaborative editing with Collaboration Client and Server (ASP.NET Core backend) |
+| collaborative-editing-java.md| Collaborative editing using SockJS, STOMP, and Redis in a Java (Spring Boot) backend |
 
 ## Key Rules for Code Generation
 

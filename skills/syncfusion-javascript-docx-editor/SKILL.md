@@ -117,6 +117,8 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | document-protection.md               | Protect and Restrict Document Editing    |
 | paste-formatting.md                  | Paste with Formatting Support            |
 | spell-checker.md                     | Spell Check Configuration and Usage      |
+| collaborative-editing-core.md | Collaborative editing with Collaboration Client and Server (ASP.NET Core backend) |
+| collaborative-editing-java.md| Collaborative editing using SockJS, STOMP, and Redis in a Java (Spring Boot) backend |
 
 ## Key Rules for Code Generation (TypeScript-first)
 
