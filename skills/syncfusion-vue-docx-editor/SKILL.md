@@ -117,6 +117,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | find-and-replace.md                  | Find and Replace Text                    |
 | form-fields.md                       | Create and Manage Form Fields            |
 | paste-formatting.md                  | Control Paste Formatting Behavior        |
+| insert-text-box.md                   | Insert Text Box Dialog                  |
 | ribbon.md                            | initialize documentEditor with Ribbon UI |
 | spell-check.md                       | Enable and Configure Spell Check         |
 | collaborative-editing-core.md | Collaborative editing with Collaboration Client and Server (ASP.NET Core backend) |

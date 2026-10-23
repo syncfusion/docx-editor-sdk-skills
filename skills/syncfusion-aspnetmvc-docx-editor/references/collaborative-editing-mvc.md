@@ -130,6 +130,14 @@ const client = new CollaborationClient(adapter, {
 
 **Note**
 - ASP.NET MVC Collaboration Server supports WebSocket transport only.
+- When using the UMD/global script bundle (`@syncfusion/ej2-collaborator/dist/ej2-collaborator.min.js`) instead of ES module imports, `CollaborationClient` is exposed as `ej.collaborator.CollaborationClient`:
+
+```html
+<script src="https://cdn.syncfusion.com/ej2/{version}/dist/ej2-collaborator.min.js"></script>
+<script>
+    var client = new ej.collaborator.CollaborationClient(adapter, { ... });
+</script>
+```
 
 ---
 
@@ -158,7 +166,7 @@ namespace WebApplication1
             ServiceCollectionExtensions.AddCollaborationServer(options =>
             {
                 options.ConnectionString = "Your Redis Connection string";
-                options.ConnectionType = CollaborationConnectionType.WebSocket;
+                options.ConnectionType = Syncfusion.Collaboration.Core.Extensions.CollaborationConnectionType.WebSocket;
             });
         }
     }
@@ -219,6 +227,7 @@ Implement `ICollaborationAdapter` to translate Document Editor actions.
 using Syncfusion.Collaboration.Core.Interfaces;
 using Syncfusion.Collaboration.Core.Models;
 using Syncfusion.Collaboration.Core.Services;
+using Syncfusion.Collaboration.Core.Extensions;
 using Syncfusion.EJ2.DocumentEditor;
 using Newtonsoft.Json;
 
@@ -336,6 +345,8 @@ using System.Web.Http;
 using Syncfusion.Collaboration.Core.Interfaces;
 using Syncfusion.Collaboration.Core.Models;
 using Syncfusion.Collaboration.Core.Services;
+using Syncfusion.Collaboration.Core.Transports;
+using Syncfusion.Collaboration.Core.Extensions;
 using Syncfusion.EJ2.DocumentEditor;
 using Newtonsoft.Json;
 

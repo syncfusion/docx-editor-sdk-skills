@@ -15,7 +15,9 @@ import {
   DocumentEditorComponent,
   ToolbarService
 } from '@syncfusion/ej2-angular-documenteditor';
+import { DocumentEditor, CollaborativeEditingHandler } from '@syncfusion/ej2-documenteditor';
 
+DocumentEditor.Inject(CollaborativeEditingHandler);
 @Component({
   selector: 'app-collaborative-editor',
   templateUrl: './collaborative-editor.component.html',

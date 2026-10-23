@@ -8,6 +8,21 @@
 
 Enable collaborative editing in the DOCX Editor component. All initialization must run inside the component's **`created` event** — NOT during script load. The `created` event fires only after the `DocumentEditorContainer` has fully initialized, so `documentEditor` is guaranteed to be defined.
 
+> **Note:** The collaborative editing examples referenced in this skill use ES5 script-based code. When generating ES6 module-based implementations, always import and inject the required modules before initializing collaborative editing.
+
+```ts
+import {
+    DocumentEditorContainer,
+    Toolbar,
+    DocumentEditor,
+    CollaborativeEditingHandler
+} from '@syncfusion/ej2-documenteditor';
+import { CollaborationClient } from '@syncfusion/ej2-collaborator';
+
+DocumentEditorContainer.Inject(Toolbar);
+DocumentEditor.Inject(CollaborativeEditingHandler);
+```
+
 ```html
 <!DOCTYPE html>
 <html>

@@ -129,6 +129,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | customize-toolbar.md          | Custom toolbar items, button state, and pane control   |
 | find-and-replace.md           | Search, replace, and search-results management         |
 | paste-formatting.md           | Preserve clipboard formatting with a backend service   |
+| insert-text-box.md            | Insert Text Box Dialog                  |
 | ribbon.md                     | initialize the documenteditor with Ribbon UI           |
 | customize-ribbon.md           | Customize Ribbon Tabs                                  |
 | collaborative-editing-core.md | Collaborative editing with Collaboration Client and Server (ASP.NET Core backend) |

@@ -9,10 +9,11 @@
 Enable collaborative editing in the DOCX Editor component. All initialization that touches `container.documentEditor` (enabling collaborative editing, creating the adapter, loading the document) must run inside the component's **`created` event** — NOT inside `useEffect([])`. The `created` event fires only after the `DocumentEditorContainerComponent` has fully initialized, so `documentEditor` is guaranteed to be defined. Using `useEffect` causes a race where `documentEditor` is still `undefined` and calls like `documentEditor.open(...)` throw `TypeError: Cannot read properties of undefined`.
 
 ```tsx
-import { DocumentEditorComponent, CollaborativeEditingHandler, Inject } from '@syncfusion/ej2-react-documenteditor';
+import { DocumentEditorComponent, CollaborativeEditingHandler, Inject, DocumentEditor } from '@syncfusion/ej2-react-documenteditor';
 
 // Inject collaborative editing module
-DocumentEditorComponent.Inject(CollaborativeEditingHandler);
+DocumentEditorComponent.Inject(CollaborativeEditingHandler, Toolbar);
+DocumentEditor.Inject(CollaborativeEditingHandler);
 
 export const YourComponent = () => {
   const containerRef = useRef(null);

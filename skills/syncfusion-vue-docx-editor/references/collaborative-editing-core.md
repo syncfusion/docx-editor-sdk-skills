@@ -21,7 +21,8 @@ Enable collaborative editing in the DOCX Editor component. All initialization th
 
 <script>
 import { ref } from 'vue';
-import { DocumentEditorContainerComponent } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar, DocumentEditor } from '@syncfusion/ej2-vue-documenteditor';
+import { CollaborativeEditingHandler } from '@syncfusion/ej2-documenteditor';
 
 export default {
   components: {
@@ -31,6 +32,7 @@ export default {
     const containerRef = ref(null);
 
     const onCreated = () => {
+      DocumentEditor.Inject(CollaborativeEditingHandler);
       if (containerRef.value?.documentEditor) {
         containerRef.value.documentEditor.enableCollaborativeEditing = true;
       }

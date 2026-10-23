@@ -10,8 +10,10 @@ Enable collaborative editing in the DOCX Editor component. All initialization th
 
 ```typescript
 import { Component, ViewChild } from '@angular/core';
-import { DocumentEditorContainerComponent, DocumentEditorComponent } from '@syncfusion/ej2-angular-documenteditor';
+import { DocumentEditorContainerComponent, DocumentEditorComponent, ToolbarService } from '@syncfusion/ej2-angular-documenteditor';
+import { DocumentEditor, CollaborativeEditingHandler } from '@syncfusion/ej2-documenteditor';
 
+DocumentEditor.Inject(CollaborativeEditingHandler);
 @Component({
   selector: 'app-collaborative-editor',
   template: `

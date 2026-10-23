@@ -116,6 +116,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | ribbon.md                            | Enable and Configure Ribbon UI           |
 | document-protection.md               | Protect and Restrict Document Editing    |
 | paste-formatting.md                  | Paste with Formatting Support            |
+| insert-text-box.md                   | Insert Text Box Dialog                  |
 | spell-checker.md                     | Spell Check Configuration and Usage      |
 | collaborative-editing-core.md | Collaborative editing with Collaboration Client and Server (ASP.NET Core backend) |
 | collaborative-editing-java.md| Collaborative editing using SockJS, STOMP, and Redis in a Java (Spring Boot) backend |

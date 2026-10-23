@@ -8,6 +8,21 @@
 
 All initialization must run inside the component's **`created` event** — NOT during script load.
 
+> **Note:** The collaborative editing examples referenced in this skill use ES5 script-based code. When generating ES6 module-based implementations, always import and inject the required modules before initializing collaborative editing.
+
+```ts
+import {
+    DocumentEditorContainer,
+    Toolbar,
+    DocumentEditor,
+    CollaborativeEditingHandler
+} from '@syncfusion/ej2-documenteditor';
+import { CollaborationClient } from '@syncfusion/ej2-collaborator';
+
+DocumentEditorContainer.Inject(Toolbar);
+DocumentEditor.Inject(CollaborativeEditingHandler);
+```
+
 ```html
 <!DOCTYPE html>
 <html>

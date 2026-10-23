@@ -92,6 +92,7 @@ All code snippets and examples are in the `references/` folder. Each file contai
 | find-and-replace.md                  | Find and Replace Text                    |
 | form-fields.md                       | Create and Manage Form Fields            |
 | paste-formatting.md                  | Preserve paste formatting (server-side)  |
+| insert-text-box.md                   | Insert Text Box Dialog                  |
 | ribbon.md                            | Initialize documentEditor with Ribbon UI |
 | track-changes.md                     | Track Changes and Manage Revisions       |
 | collaborative-editing-mvc.md | Collaborative editing with Collaboration Client and Server (ASP.NET CoMVCre backend) |
@@ -116,6 +117,8 @@ All code snippets and examples are in the `references/` folder. Each file contai
 7. **Framework adaptation** — Default to plain JavaScript/TypeScript. When user specifies framework.
 
 8. **No hallucinated APIs** — Use only verified Syncfusion DOCX Editor SDK method names. One wrong method breaks user trust.
+
+9. **Classic .csproj registration** — ASP.NET MVC 5 projects use classic (non-SDK) `.csproj` files. EVERY newly generated `.cs` file must be added as a `<Compile Include="...">` entry, and every new NuGet assembly as a `<Reference>` with `HintPath` (plus a `packages.config` entry), or the file will be silently excluded from compilation and the build will fail. See `references/collaborative-editing-mvc.md` → "Register New Files in the Project (.csproj)".
 
 ## Rules
 

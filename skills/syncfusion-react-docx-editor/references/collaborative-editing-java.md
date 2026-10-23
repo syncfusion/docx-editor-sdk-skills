@@ -7,9 +7,10 @@
 ## Enable Collaborative Editing
 
 ```tsx
-import { DocumentEditorContainerComponent, Toolbar, CollaborativeEditingHandler, Inject } from '@syncfusion/ej2-react-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar, CollaborativeEditingHandler, Inject, DocumentEditor } from '@syncfusion/ej2-react-documenteditor';
 
-DocumentEditorComponent.Inject(CollaborativeEditingHandler);
+DocumentEditorComponent.Inject(CollaborativeEditingHandler, Toolbar);
+DocumentEditor.Inject(CollaborativeEditingHandler);
 
 componentDidMount(): void {
   if (this.container) {
